@@ -11,4 +11,4 @@ Dictionary:
 - *Bebek Pedaging* = Meat ducks (ducks raised for meat production)  
 - *Berbulu putih* = White-feathered  
 - *Berat Keseluruhan* = Total weight of Ducks
-- *Food Conversion Ratio (FCR)* = Feed Conversion Ratio (standard term in poultry farming)  
+- *FCR* = Feed Conversion Ratio (standard term in poultry farming)  
