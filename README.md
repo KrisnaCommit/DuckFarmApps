@@ -1,4 +1,4 @@
-# WinFormsApp1
+# DuckFarmApps
 **DuckFarmApps** is a desktop application designed for duck farmers, specifically used to calculate:  
 1. **Total Weight of Meat Ducks** (especially white-feathered meat ducks)  
 2. **FCR (Feed Conversion Ratio)**  
