@@ -16,4 +16,4 @@ Dictionary:
 - *Berat Keseluruhan* = Total weight of Ducks
 - *FCR* = Feed Conversion Ratio (standard term in poultry farming)
 
-- Updated (13/04/2025)  
+- Updated (14/04/2025)  
