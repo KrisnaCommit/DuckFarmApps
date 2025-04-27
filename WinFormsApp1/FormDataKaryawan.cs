@@ -123,7 +123,7 @@ namespace WinFormsApp1
                 int id = e.RowIndex;
                 textBoxidUpdate.Text = dataGridViewABK.Rows[id].Cells[0].Value.ToString();
                 textBoxNamaUpdate.Text = dataGridViewABK.Rows[id].Cells[1].Value.ToString(); //Cursor ke TextBox Edit Nama
-                textBoxNoHPUpdate.Text = dataGridViewABK.Rows[id].Cells[2].Value.ToString(); //Cursor ke TextBox Edit NoHP
+                textBoxNoHPUpdate.Text = dataGridViewABK.Rows[id].Cells[2].Value.ToString(); //Cursor ke TextBox Edit No_HP
                 textBoxAlamatUpdate.Text = dataGridViewABK.Rows[id].Cells[3].Value.ToString(); //Cursor ke TextBox Edit Alamat
 
                 textBoxNamaUpdate.Enabled = true; //Data yang ditambahkan akan terbuka & data yang tertambah akan tercetak di TextBox Nama
@@ -168,7 +168,7 @@ namespace WinFormsApp1
 
         private void TombolBack_Click(object sender, EventArgs e)
         {
-            // Membuka Hitung Bobot
+            // Membuka HitungBobot
             Form1 halaman2 = new Form1();
             halaman2.Show();  // Menampilkan Hitung Bobot
 
