@@ -121,18 +121,48 @@ namespace WinFormsApp1
             if (e.ColumnIndex == 4)
             {
                 int id = e.RowIndex;
-                textBoxNamaUpdate.Text = dataGridViewABK.Rows[id].Cells[1].Value.ToString();
-                textBoxNoHPUpdate.Text = dataGridViewABK.Rows[id].Cells[2].Value.ToString();
-                textBoxAlamatUpdate.Text = dataGridViewABK.Rows[id].Cells[3].Value.ToString();
+                textBoxidUpdate.Text = dataGridViewABK.Rows[id].Cells[0].Value.ToString();
+                textBoxNamaUpdate.Text = dataGridViewABK.Rows[id].Cells[1].Value.ToString(); //Cursor ke TextBox Edit Nama
+                textBoxNoHPUpdate.Text = dataGridViewABK.Rows[id].Cells[2].Value.ToString(); //Cursor ke TextBox Edit NoHP
+                textBoxAlamatUpdate.Text = dataGridViewABK.Rows[id].Cells[3].Value.ToString(); //Cursor ke TextBox Edit Alamat
 
-                textBoxNamaUpdate.Enabled = true;
-                textBoxNoHPUpdate.Enabled = true;
-                textBoxAlamatUpdate.Enabled = true;
+                textBoxNamaUpdate.Enabled = true; //Data yang ditambahkan akan terbuka & data yang tertambah akan tercetak di TextBox Nama
+                textBoxNoHPUpdate.Enabled = true; //Data yang ditambahkan akan terbuka & data yang tertambah akan tercetak di TextBox No HP
+                textBoxAlamatUpdate.Enabled = true; //Data yang ditambahkan akan terbuka & data yang tertambah akan tercetak di TextBox Alamat
             }
 
             if (e.ColumnIndex == 5)
             {
-                // Handle delete logic here
+                int id = e.RowIndex;
+                MySqlCommand cmd;
+
+                try
+                {
+                    if (connection.State != ConnectionState.Open)
+                    {
+                        connection.Open();
+                    }
+
+                    cmd = connection.CreateCommand();
+                    cmd.CommandText = "DELETE from tbkaryawan WHERE id = @id";
+                    cmd.Parameters.AddWithValue("@id", dataGridViewABK.Rows[id].Cells[0].Value.ToString());
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+                    dataGridViewABK.Columns.Clear();
+                    dt.Clear();
+                    fillDataKaryawan();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred: {ex.Message}");
+                }
+                finally
+                {
+                    if (connection.State == ConnectionState.Open)
+                    {
+                        connection.Close();
+                    }
+                }
             }
         }
 
