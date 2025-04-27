@@ -28,15 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HitungBobot));
-            button1 = new Button();
-            label12 = new Label();
             label10 = new Label();
             TombolKurangiKarung = new Button();
             TombolTambahKarung = new Button();
             SalinBobotPerKarung = new Button();
             label4 = new Label();
-            HitungBobotPerKarung = new Button();
             label3 = new Label();
             label1 = new Label();
             textBox1 = new TextBox();
@@ -49,131 +45,123 @@
             textBox3 = new TextBox();
             label8 = new Label();
             label2 = new Label();
+            button1 = new Button();
             SuspendLayout();
-            // 
-            // button1
-            // 
-            button1.Location = new Point(188, 383);
-            button1.Name = "button1";
-            button1.Size = new Size(143, 34);
-            button1.TabIndex = 38;
-            button1.Text = "Salin";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Location = new Point(32, 345);
-            label12.Name = "label12";
-            label12.Size = new Size(93, 25);
-            label12.TabIndex = 37;
-            label12.Text = "Rata-Rata:";
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(29, 28);
+            label10.Location = new Point(23, 22);
+            label10.Margin = new Padding(2, 0, 2, 0);
             label10.Name = "label10";
-            label10.Size = new Size(364, 50);
+            label10.Size = new Size(390, 40);
             label10.TabIndex = 36;
-            label10.Text = "Gunakan ini jika ingin menghitung langsung \r\nrata-rata bobot sambil memanen.";
+            label10.Text = "Gunakan ini jika ingin menghitung langsung \r\nrata-rata bobot sambil memanen. (Tulis dalam satuan kg)";
+            label10.Click += label10_Click;
             // 
             // TombolKurangiKarung
             // 
-            TombolKurangiKarung.Location = new Point(32, 172);
+            TombolKurangiKarung.Location = new Point(26, 138);
+            TombolKurangiKarung.Margin = new Padding(2);
             TombolKurangiKarung.Name = "TombolKurangiKarung";
-            TombolKurangiKarung.Size = new Size(143, 34);
+            TombolKurangiKarung.Size = new Size(114, 27);
             TombolKurangiKarung.TabIndex = 35;
             TombolKurangiKarung.Text = "Kurangi Karung";
             TombolKurangiKarung.UseVisualStyleBackColor = true;
+            TombolKurangiKarung.Click += TombolKurangiKarung_Click;
             // 
             // TombolTambahKarung
             // 
-            TombolTambahKarung.Location = new Point(337, 124);
+            TombolTambahKarung.Location = new Point(270, 99);
+            TombolTambahKarung.Margin = new Padding(2);
             TombolTambahKarung.Name = "TombolTambahKarung";
-            TombolTambahKarung.Size = new Size(40, 34);
+            TombolTambahKarung.Size = new Size(32, 27);
             TombolTambahKarung.TabIndex = 34;
             TombolTambahKarung.Text = "+";
             TombolTambahKarung.UseVisualStyleBackColor = true;
+            TombolTambahKarung.Click += TombolTambahKarung_Click;
             // 
             // SalinBobotPerKarung
             // 
-            SalinBobotPerKarung.Location = new Point(188, 300);
+            SalinBobotPerKarung.Location = new Point(143, 224);
+            SalinBobotPerKarung.Margin = new Padding(2);
             SalinBobotPerKarung.Name = "SalinBobotPerKarung";
-            SalinBobotPerKarung.Size = new Size(143, 34);
+            SalinBobotPerKarung.Size = new Size(114, 27);
             SalinBobotPerKarung.TabIndex = 33;
             SalinBobotPerKarung.Text = "Salin";
             SalinBobotPerKarung.UseVisualStyleBackColor = true;
+            SalinBobotPerKarung.Click += SalinBobotPerKarung_Click;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(32, 264);
+            label4.Location = new Point(26, 196);
+            label4.Margin = new Padding(2, 0, 2, 0);
             label4.Name = "label4";
-            label4.Size = new Size(107, 25);
+            label4.Size = new Size(90, 20);
             label4.TabIndex = 32;
             label4.Text = "Total Bobot:";
-            // 
-            // HitungBobotPerKarung
-            // 
-            HitungBobotPerKarung.Location = new Point(188, 215);
-            HitungBobotPerKarung.Name = "HitungBobotPerKarung";
-            HitungBobotPerKarung.Size = new Size(143, 34);
-            HitungBobotPerKarung.TabIndex = 31;
-            HitungBobotPerKarung.Text = "Hitung";
-            HitungBobotPerKarung.UseVisualStyleBackColor = true;
+            label4.Click += label4_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(29, 87);
+            label3.Location = new Point(23, 70);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(95, 25);
+            label3.Size = new Size(78, 20);
             label3.TabIndex = 30;
             label3.Text = "Karung ke:";
+            label3.Click += label3_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(29, 127);
+            label1.Location = new Point(23, 102);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(146, 25);
+            label1.Size = new Size(122, 20);
             label1.TabIndex = 29;
             label1.Text = "Berat Per Karung:";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(188, 126);
+            textBox1.Location = new Point(150, 101);
+            textBox1.Margin = new Padding(2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(143, 31);
+            textBox1.Size = new Size(115, 27);
             textBox1.TabIndex = 28;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(445, 263);
+            label7.Location = new Point(356, 210);
+            label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(275, 48);
+            label7.Size = new Size(231, 41);
             label7.TabIndex = 40;
             label7.Text = "DuckFarmApps";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 82F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(431, 33);
+            label6.Font = new Font("Segoe UI", 50F);
+            label6.Location = new Point(378, 89);
+            label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(300, 219);
+            label6.Size = new Size(154, 112);
             label6.TabIndex = 39;
             label6.Text = "\U0001f986";
             // 
             // TombolBack
             // 
             TombolBack.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            TombolBack.Location = new Point(672, 592);
+            TombolBack.Location = new Point(538, 474);
+            TombolBack.Margin = new Padding(2);
             TombolBack.Name = "TombolBack";
-            TombolBack.Size = new Size(116, 41);
+            TombolBack.Size = new Size(93, 33);
             TombolBack.TabIndex = 41;
             TombolBack.Text = "Kembali";
             TombolBack.TextAlign = ContentAlignment.TopCenter;
@@ -184,60 +172,82 @@
             // 
             label13.AutoSize = true;
             label13.ForeColor = Color.Red;
-            label13.Location = new Point(23, 573);
+            label13.Location = new Point(18, 458);
+            label13.Margin = new Padding(2, 0, 2, 0);
             label13.Name = "label13";
-            label13.Size = new Size(324, 50);
+            label13.Size = new Size(271, 40);
             label13.TabIndex = 46;
             label13.Text = "Note: Bagian ini tidak bisa menghitung \r\nrata-rata.";
             // 
             // button2
             // 
-            button2.Location = new Point(179, 530);
+            button2.Location = new Point(143, 424);
+            button2.Margin = new Padding(2);
             button2.Name = "button2";
-            button2.Size = new Size(143, 34);
+            button2.Size = new Size(114, 27);
             button2.TabIndex = 45;
             button2.Text = "Salin";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(20, 429);
+            label9.Location = new Point(16, 343);
+            label9.Margin = new Padding(2, 0, 2, 0);
             label9.Name = "label9";
-            label9.Size = new Size(311, 50);
+            label9.Size = new Size(259, 40);
             label9.TabIndex = 44;
             label9.Text = "Gunakan ini jika berat per karung\r\n(yang dipanen) sudah ditulis di kertas.";
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(172, 489);
+            textBox3.Location = new Point(138, 391);
+            textBox3.Margin = new Padding(2);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(150, 31);
+            textBox3.Size = new Size(121, 27);
             textBox3.TabIndex = 43;
+            textBox3.TextChanged += textBox3_TextChanged;
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(20, 489);
+            label8.Location = new Point(16, 391);
+            label8.Margin = new Padding(2, 0, 2, 0);
             label8.Name = "label8";
-            label8.Size = new Size(107, 25);
+            label8.Size = new Size(90, 20);
             label8.TabIndex = 42;
             label8.Text = "Total Bobot:";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(374, 331);
+            label2.Location = new Point(299, 265);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(393, 250);
+            label2.Size = new Size(327, 80);
             label2.TabIndex = 47;
-            label2.Text = resources.GetString("label2.Text");
+            label2.Text = "Ini merupakan proyek eksperimental yang tidak \r\ndidanai oleh siapapun. Dibuat sendiri dan \r\nsaya sangat menghargai apabila ada yang \r\nmendownload dengan menyertai kredit sumber.";
+            label2.Click += label2_Click;
+            // 
+            // button1
+            // 
+            button1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            button1.Location = new Point(356, 378);
+            button1.Margin = new Padding(2);
+            button1.Name = "button1";
+            button1.Size = new Size(93, 33);
+            button1.TabIndex = 49;
+            button1.Text = "Github";
+            button1.TextAlign = ContentAlignment.TopCenter;
+            button1.UseVisualStyleBackColor = true;
             // 
             // HitungBobot
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 645);
+            ClientSize = new Size(640, 516);
+            Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(label13);
             Controls.Add(button2);
@@ -247,34 +257,28 @@
             Controls.Add(TombolBack);
             Controls.Add(label7);
             Controls.Add(label6);
-            Controls.Add(button1);
-            Controls.Add(label12);
             Controls.Add(label10);
             Controls.Add(TombolKurangiKarung);
             Controls.Add(TombolTambahKarung);
             Controls.Add(SalinBobotPerKarung);
             Controls.Add(label4);
-            Controls.Add(HitungBobotPerKarung);
             Controls.Add(label3);
             Controls.Add(label1);
             Controls.Add(textBox1);
             Font = new Font("Segoe UI", 9F);
+            Margin = new Padding(2);
             Name = "HitungBobot";
-            Text = "Hitung Kerataan";
+            Text = "Hitung Bobot";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Button button1;
-        private Label label12;
         private Label label10;
         private Button TombolKurangiKarung;
         private Button TombolTambahKarung;
         private Button SalinBobotPerKarung;
         private Label label4;
-        private Button HitungBobotPerKarung;
         private Label label3;
         private Label label1;
         private TextBox textBox1;
@@ -287,5 +291,7 @@
         private TextBox textBox3;
         private Label label8;
         private Label label2;
+        private Button button1;
+        private Button button3;
     }
 }

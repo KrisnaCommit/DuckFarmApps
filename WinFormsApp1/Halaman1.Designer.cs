@@ -35,15 +35,18 @@
             label7 = new Label();
             label6 = new Label();
             label3 = new Label();
+            buttonSQLConnect = new Button();
+            button4 = new Button();
             SuspendLayout();
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Arial", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(70, 245);
+            label1.Location = new Point(56, 196);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(660, 46);
+            label1.Size = new Size(568, 40);
             label1.TabIndex = 0;
             label1.Text = "Selamat datang di DuckFarmApps";
             label1.TextAlign = ContentAlignment.TopRight;
@@ -53,9 +56,10 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(115, 300);
+            label2.Location = new Point(92, 240);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(571, 58);
+            label2.Size = new Size(464, 48);
             label2.TabIndex = 1;
             label2.Text = "Anda sekarang di Halaman Utama.\r\nPilih halaman dengan menekan tombol dibawah!";
             label2.TextAlign = ContentAlignment.TopCenter;
@@ -64,9 +68,10 @@
             // button1
             // 
             button1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(425, 372);
+            button1.Location = new Point(235, 295);
+            button1.Margin = new Padding(2);
             button1.Name = "button1";
-            button1.Size = new Size(181, 63);
+            button1.Size = new Size(145, 50);
             button1.TabIndex = 2;
             button1.Text = "HitungFCR";
             button1.UseVisualStyleBackColor = true;
@@ -75,9 +80,10 @@
             // button2
             // 
             button2.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(195, 372);
+            button2.Location = new Point(51, 295);
+            button2.Margin = new Padding(2);
             button2.Name = "button2";
-            button2.Size = new Size(224, 63);
+            button2.Size = new Size(179, 50);
             button2.TabIndex = 4;
             button2.Text = "Hitung Bobot";
             button2.UseVisualStyleBackColor = true;
@@ -87,9 +93,10 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(225, 21);
+            label7.Location = new Point(180, 17);
+            label7.Margin = new Padding(2, 0, 2, 0);
             label7.Name = "label7";
-            label7.Size = new Size(554, 96);
+            label7.Size = new Size(460, 81);
             label7.TabIndex = 42;
             label7.Text = "DuckFarmApps";
             // 
@@ -97,9 +104,10 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 82F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(-8, 9);
+            label6.Location = new Point(-6, 7);
+            label6.Margin = new Padding(2, 0, 2, 0);
             label6.Name = "label6";
-            label6.Size = new Size(300, 219);
+            label6.Size = new Size(251, 182);
             label6.TabIndex = 41;
             label6.Text = "\U0001f986";
             // 
@@ -107,17 +115,44 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Arial", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(254, 117);
+            label3.Location = new Point(203, 94);
+            label3.Margin = new Padding(2, 0, 2, 0);
             label3.Name = "label3";
-            label3.Size = new Size(234, 29);
+            label3.Size = new Size(194, 24);
             label3.TabIndex = 43;
             label3.Text = "Salam Wek Wek! \U0001f986";
             // 
+            // buttonSQLConnect
+            // 
+            buttonSQLConnect.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonSQLConnect.Location = new Point(435, 132);
+            buttonSQLConnect.Margin = new Padding(2);
+            buttonSQLConnect.Name = "buttonSQLConnect";
+            buttonSQLConnect.Size = new Size(167, 50);
+            buttonSQLConnect.TabIndex = 44;
+            buttonSQLConnect.Text = "SQLConnect";
+            buttonSQLConnect.UseVisualStyleBackColor = true;
+            buttonSQLConnect.Click += button3_Click;
+            // 
+            // button4
+            // 
+            button4.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button4.Location = new Point(384, 295);
+            button4.Margin = new Padding(2);
+            button4.Name = "button4";
+            button4.Size = new Size(223, 50);
+            button4.TabIndex = 45;
+            button4.Text = "Data Karyawan";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(640, 360);
+            Controls.Add(button4);
+            Controls.Add(buttonSQLConnect);
             Controls.Add(label3);
             Controls.Add(label7);
             Controls.Add(label6);
@@ -125,6 +160,7 @@
             Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new Padding(2);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -140,5 +176,7 @@
         private Label label7;
         private Label label6;
         private Label label3;
+        private Button buttonSQLConnect;
+        private Button button4;
     }
 }
