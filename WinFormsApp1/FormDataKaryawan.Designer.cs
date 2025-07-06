@@ -63,6 +63,7 @@
             // 
             // textBoxNamaAdd
             // 
+            textBoxNamaAdd.BackColor = Color.White;
             textBoxNamaAdd.Location = new Point(76, 85);
             textBoxNamaAdd.Name = "textBoxNamaAdd";
             textBoxNamaAdd.Size = new Size(133, 27);
@@ -71,6 +72,7 @@
             // 
             // textBoxNoHPAdd
             // 
+            textBoxNoHPAdd.BackColor = Color.White;
             textBoxNoHPAdd.Location = new Point(76, 128);
             textBoxNoHPAdd.Name = "textBoxNoHPAdd";
             textBoxNoHPAdd.Size = new Size(133, 27);
@@ -79,6 +81,7 @@
             // 
             // textBoxAlamatAdd
             // 
+            textBoxAlamatAdd.BackColor = Color.White;
             textBoxAlamatAdd.Location = new Point(76, 173);
             textBoxAlamatAdd.Name = "textBoxAlamatAdd";
             textBoxAlamatAdd.Size = new Size(133, 27);
@@ -87,16 +90,19 @@
             // 
             // btnSimpan
             // 
+            btnSimpan.BackColor = Color.FromArgb(224, 224, 224);
+            btnSimpan.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnSimpan.Location = new Point(215, 85);
             btnSimpan.Name = "btnSimpan";
             btnSimpan.Size = new Size(152, 115);
             btnSimpan.TabIndex = 4;
             btnSimpan.Text = "Tambah Data";
-            btnSimpan.UseVisualStyleBackColor = true;
+            btnSimpan.UseVisualStyleBackColor = false;
             btnSimpan.Click += btnSimpan_Click;
             // 
             // btnUpdate
             // 
+            btnUpdate.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             btnUpdate.Location = new Point(636, 42);
             btnUpdate.Name = "btnUpdate";
             btnUpdate.Size = new Size(152, 157);
@@ -211,7 +217,9 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
             label2.Font = new Font("Segoe UI", 19F);
+            label2.ForeColor = Color.Black;
             label2.Location = new Point(12, 17);
             label2.Name = "label2";
             label2.Size = new Size(61, 45);
@@ -222,6 +230,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 19F, FontStyle.Bold);
+            label3.ForeColor = Color.Black;
             label3.Location = new Point(65, 17);
             label3.Name = "label3";
             label3.Size = new Size(266, 45);
@@ -232,6 +241,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.White;
             ClientSize = new Size(800, 524);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -254,7 +264,7 @@
             Controls.Add(textBoxNamaAdd);
             Controls.Add(dataGridViewABK);
             Name = "FormDataKaryawan";
-            Text = "Form Daftar ABK";
+            Text = "Form Data ABK";
             Load += FormDataKaryawan_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewABK).EndInit();
             ResumeLayout(false);

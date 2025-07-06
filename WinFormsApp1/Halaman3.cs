@@ -62,7 +62,15 @@ namespace WinFormsApp1
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            if (!string.IsNullOrWhiteSpace(label5.Text))
+            {
+                Clipboard.SetText(label5.Text);
+                MessageBox.Show("Hasil telah disalin!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Tidak ada hasil untuk disalin.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void label11_Click(object sender, EventArgs e)
@@ -86,6 +94,43 @@ namespace WinFormsApp1
         }
 
         private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void HitungTotalPakan_Click(object sender, EventArgs e)
+        {
+            double nilai1, nilai2, hasil;
+
+            if (double.TryParse(textBox2.Text, out nilai1) && double.TryParse(textBox4.Text, out nilai2))
+            {
+                if (nilai2 != 0)
+                {
+                    hasil = nilai1 / nilai2;
+                    label5.Text = hasil.ToString("N2"); // hasil dengan dua angka desimal
+                }
+                else
+                {
+                    MessageBox.Show("Pembagi tidak boleh nol.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Masukkan angka yang valid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Hitung_FCR_Load(object sender, EventArgs e)
         {
 
         }

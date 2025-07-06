@@ -15,7 +15,7 @@ namespace WinFormsApp1
 
     public partial class FormDataKaryawan : Form
     {
-        MySqlConnection connection = new MySqlConnection("Server=localhost;Database=duckfarmapps;User ID=root;Password=;");
+        MySqlConnection connection = new MySqlConnection("Server=localhost;Database=duckfarmapps;User ID=root;Password=;"); //Koneksi ke database duckfarmapps
         DataTable dt = new DataTable();
 
         public FormDataKaryawan()
@@ -23,6 +23,7 @@ namespace WinFormsApp1
             InitializeComponent();
         }
 
+        //Menampilkan atau Mengisi data dari (tbkaryawan) ke DataGridView
         private void FormDataKaryawan_Load(object sender, EventArgs e)
         {
             fillDataKaryawan();
@@ -48,11 +49,13 @@ namespace WinFormsApp1
 
         }
 
+        //Memanggil table karyawan (tbkaryawan) dari database duckfarmapps MySQL
         public DataTable getDataKaryawan()
         {
             dt.Reset();
             dt = new DataTable();
 
+            //Menampilkan table karyawan (tbkaryawan) dari database duckfarmapps MySQL
             using (MySqlCommand command = new MySqlCommand("SELECT * FROM tbkaryawan", connection))
             {
                 connection.Open();
@@ -64,15 +67,15 @@ namespace WinFormsApp1
 
         private void fillDataKaryawan()
         {
-            dataGridViewABK.DataSource = getDataKaryawan();
+            dataGridViewABK.DataSource = getDataKaryawan(); //(getDataKaryawan()) Mengisi data tbkaryawan ke DataGridView
 
-            DataGridViewButtonColumn editData = new DataGridViewButtonColumn();
+            DataGridViewButtonColumn editData = new DataGridViewButtonColumn(); //Tombol Edit
             editData.UseColumnTextForButtonValue = true;
             editData.Text = "Edit";
             editData.Name = "";
             dataGridViewABK.Columns.Add(editData);
 
-            DataGridViewButtonColumn hapusData = new DataGridViewButtonColumn();
+            DataGridViewButtonColumn hapusData = new DataGridViewButtonColumn(); //Tombol Delete
             hapusData.UseColumnTextForButtonValue = true;
             hapusData.Text = "Delete";
             hapusData.Name = "";
@@ -81,7 +84,7 @@ namespace WinFormsApp1
             connection.Close();
         }
 
-        private void btnSimpan_Click(object sender, EventArgs e)
+        private void btnSimpan_Click(object sender, EventArgs e) //Add Data
         {
             MySqlCommand cmd;
 
@@ -118,10 +121,10 @@ namespace WinFormsApp1
         }
         private void dataGridViewABK_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 4)
+            if (e.ColumnIndex == 4) //Kolom ke-4 data
             {
                 int id = e.RowIndex;
-                textBoxidUpdate.Text = dataGridViewABK.Rows[id].Cells[0].Value.ToString();
+                textBoxidUpdate.Text = dataGridViewABK.Rows[id].Cells[0].Value.ToString(); //Cursor ke TextBox id
                 textBoxNamaUpdate.Text = dataGridViewABK.Rows[id].Cells[1].Value.ToString(); //Cursor ke TextBox Edit Nama
                 textBoxNoHPUpdate.Text = dataGridViewABK.Rows[id].Cells[2].Value.ToString(); //Cursor ke TextBox Edit No_HP
                 textBoxAlamatUpdate.Text = dataGridViewABK.Rows[id].Cells[3].Value.ToString(); //Cursor ke TextBox Edit Alamat
@@ -131,7 +134,7 @@ namespace WinFormsApp1
                 textBoxAlamatUpdate.Enabled = true; //Data yang ditambahkan akan terbuka & data yang tertambah akan tercetak di TextBox Alamat
             }
 
-            if (e.ColumnIndex == 5)
+            if (e.ColumnIndex == 5) //Kolom ke-5 dataGridView
             {
                 int id = e.RowIndex;
                 MySqlCommand cmd;
@@ -168,7 +171,7 @@ namespace WinFormsApp1
 
         private void TombolBack_Click(object sender, EventArgs e)
         {
-            // Membuka HitungBobot
+            // Membuka Home Form1
             Form1 halaman2 = new Form1();
             halaman2.Show();  // Menampilkan Hitung Bobot
 
@@ -179,7 +182,7 @@ namespace WinFormsApp1
             // this.Hide();
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e) //UPDATE Data
         {
             MySqlCommand cmd;
 
