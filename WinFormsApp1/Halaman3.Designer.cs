@@ -210,7 +210,7 @@
         {
             // Add your logic here
         }
-        // Add the missing event handler method for label5_Click
+        //Add the missing event handler method for label5_Click
         private void label5_Click(object sender, EventArgs e)
         {
             // Add your logic here
