@@ -150,7 +150,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(640, 360);
+            ClientSize = new Size(651, 360);
             Controls.Add(button4);
             Controls.Add(buttonSQLConnect);
             Controls.Add(label3);

@@ -1,4 +1,5 @@
 using MySql.Data.MySqlClient;
+using WinFormsApp1.Database;
 
 namespace WinFormsApp1
 {
@@ -65,8 +66,9 @@ namespace WinFormsApp1
             {
                 // Gunakan class DatabaseConnection
                 DatabaseConnection db = new DatabaseConnection();
-                using (var connection = db.GetConnection())
+                using (var connection = db.GetNewConnection())
                 {
+                    connection.Open();
                     // Query untuk mengambil data
                     string query = "SELECT * FROM tbuser"; // Ganti 'nama_tabel' dengan nama tabel Anda
                     MySqlCommand cmd = new MySqlCommand(query, connection);

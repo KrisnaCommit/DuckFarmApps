@@ -45,7 +45,6 @@
             textBox3 = new TextBox();
             label8 = new Label();
             label2 = new Label();
-            button1 = new Button();
             SuspendLayout();
             // 
             // label10
@@ -230,24 +229,11 @@
             label2.Text = "Ini merupakan proyek eksperimental yang tidak \r\ndidanai oleh siapapun. Dibuat sendiri dan \r\nsaya sangat menghargai apabila ada yang \r\nmendownload dengan menyertai kredit sumber.";
             label2.Click += label2_Click;
             // 
-            // button1
-            // 
-            button1.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button1.Location = new Point(356, 378);
-            button1.Margin = new Padding(2);
-            button1.Name = "button1";
-            button1.Size = new Size(93, 33);
-            button1.TabIndex = 49;
-            button1.Text = "Github";
-            button1.TextAlign = ContentAlignment.TopCenter;
-            button1.UseVisualStyleBackColor = true;
-            // 
             // HitungBobot
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(640, 516);
-            Controls.Add(button1);
             Controls.Add(label2);
             Controls.Add(label13);
             Controls.Add(button2);
@@ -291,7 +277,6 @@
         private TextBox textBox3;
         private Label label8;
         private Label label2;
-        private Button button1;
         private Button button3;
     }
 }

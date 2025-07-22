@@ -45,7 +45,11 @@ namespace WinFormsApp1
 
         private void SalinBobotPerKarung_Click(object sender, EventArgs e)
         {
+            // Salin isi dari label4 ke clipboard
+            Clipboard.SetText(label4.Text);
 
+            // Opsional: Tampilkan pesan sukses
+            MessageBox.Show("Total berat berhasil disalin ke clipboard!");
         }
 
         private void HitungBobotPerKarung_Click(object sender, EventArgs e)
@@ -97,26 +101,11 @@ namespace WinFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            // URL yang ingin dibuka
-            string url = "https://github.com/KrisnaCommit/DuckFarmApps";
-
-            try
-            {
-                // Membuka URL di browser default
-                System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
-                {
-                    FileName = url,
-                    UseShellExecute = true // Penting untuk membuka URL di browser default
-                });
-            }
-            catch (Exception ex)
-            {
-                // Menampilkan pesan error jika gagal membuka URL
-                MessageBox.Show("Gagal membuka URL: " + ex.Message);
-            }
+            // Salin isi dari label4 ke clipboard
+            Clipboard.SetText(label4.Text);
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e) //karung ke
         {
 
         }

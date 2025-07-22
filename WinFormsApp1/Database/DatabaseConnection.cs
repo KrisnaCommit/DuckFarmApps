@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
 
-namespace WinFormsApp1
+namespace WinFormsApp1.Database
 {
     public class DatabaseConnection
     {
@@ -19,13 +19,9 @@ namespace WinFormsApp1
         }
 
         // Metode untuk membuka koneksi
-        public MySqlConnection GetConnection()
+        public MySqlConnection GetNewConnection()
         {
-            if (connection.State == System.Data.ConnectionState.Closed)
-            {
-                connection.Open();
-            }
-            return connection;
+            return new MySqlConnection(connectionString);
         }
 
         // Metode untuk menutup koneksi
