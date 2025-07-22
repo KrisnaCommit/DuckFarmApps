@@ -20,8 +20,6 @@ namespace WinFormsApp1
     {
         private KaryawanController controller = new KaryawanController();
 
-        
-
         public FormDataKaryawan()
         {
             InitializeComponent();
@@ -75,8 +73,6 @@ namespace WinFormsApp1
 
         private void btnSimpan_Click(object sender, EventArgs e) //Add Data
         {
-            
-
             try
             {
                 var k = new Karyawan
@@ -133,8 +129,6 @@ namespace WinFormsApp1
 
         private void btnUpdate_Click(object sender, EventArgs e) //UPDATE Data
         {
-            MySqlCommand cmd;
-
             try
             {
                 var k = new Karyawan

@@ -13,7 +13,6 @@ namespace WinFormsApp1.Controllers
     internal class KaryawanController
     {
         private DatabaseConnection db = new DatabaseConnection();
-
         public DataTable GetAll()
         {
             DataTable dt = new DataTable();
